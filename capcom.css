@@ -109,10 +109,11 @@ ul {
 .swiper-pagination-bullet:hover {
     transform: scale(1.4);
 }
+/* 스크롤 마우스 */
 .center {
     position: absolute;
-    top: 95%;
-    right: 30px;
+    top: 90%;
+    right: 48%;
     z-index: 100;
     transform: translate(-50%, -50%);
 }
@@ -172,14 +173,14 @@ section .news {
 }
 .news {
     color: #fff;
-    padding: 75px 75px 0;
+    padding: 35px 75px 75px;
 }
 .news h2 {
-    width: 316px;
+    width: 221px;
     margin: 0 auto;
     padding-bottom: 40px;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 35px;
     line-height: 68px;
     letter-spacing: -0.05em;
 }
@@ -195,10 +196,51 @@ section .contents {
     padding: 0px;
     gap: 45px;
 }
+.event {
+    width: 100%;
+    height: 100%;
+}
+.event, .conone, .contwo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.event .slick-prev,
+.event .slick-next{
+    position: absolute;
+    top: 45%;
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    z-index: 50;
+    font-size:0;
+    cursor: pointer;
+    border: 1px solid #eee;
+	border-radius: 50%;
+}
+.slick-prev{
+    background: url(/capcomportfolio/img/back.svg) no-repeat 50% 50% / contain;
+    left: 0;
+}
+.slick-next{
+    background: url(/capcomportfolio/img/forward.svg) no-repeat 50% 50% / contain;
+    right: 0;
+}
+.event .slick-prev::before,
+.event .slick-next::before{
+    content: "";
+    display: block;
+}
+.event .slick-prev::after,
+.event .slick-next::after{
+    display: none;
+}
 .contents span {
     font-weight: 500;
-    font-size: 25px;
-    line-height: 34px;
+    font-size: 20px;
+    line-height: 27px;
     letter-spacing: -0.05em;
 }
 .f1,
@@ -227,10 +269,10 @@ section .contents {
     padding: 0px;
     gap: 5px;
 }
-/* 켑콤 유튜브 영상 */
+/* 캡콤 유튜브 영상 */
 .video {
     width: 100%;
-    padding: 75px 75px 0;
+    padding: 0 75px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -246,15 +288,15 @@ section .contents {
 }
 .site h2 {
     width: 350px;
-    margin-left: 310px;
+    line-height: 68px;
+    margin: 0 auto;
     padding: 25px 25px 0;
     color: #fff;
-    font-size: 38px;
+    font-size: 35px;
     font-weight: 900;
 }
 /* 주요 게임 사이트 */
 .all_game {
-    /* background-color: #fff; */
     width: 1287px;
     margin: 0 auto;
     padding: 25px 0 25px;
@@ -285,7 +327,6 @@ section .contents {
 }
 .all_game .game:hover {
     transform: translateY(-5px);
-    /* box-shadow: 1px 1px 20px #ddd; */
 }
 .all_game .game .gameImg {
     position: relative;
